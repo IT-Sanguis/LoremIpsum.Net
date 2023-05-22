@@ -1,0 +1,111 @@
+$font-family: "Lato", "Arial", sans-serif;
+
+$min-header-height: 6.25rem;
+$min-header-height--no-js: 3.75rem;
+
+$min-nav-height--desktop--min: 3.75rem;
+$min-nav-height--tablet: 14.063rem;
+
+$desktop-width-max: 1920px;
+$desktop-width: 1280px;
+$desktop-width--container: 1200px;
+$desktop-width--min: 960px;
+
+$tablet-width--max: 768px;
+$tablet-width: 660px;
+
+$mobile-width--max: 480px;
+$mobile-width: 320px;
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+$color--light: #ffffff;
+$color--dark: #000000;
+$color--primary: $color--light;
+$color--secondary: #272733;
+$color--accent: #3e9cdc;
+
+$color-link: $color--light;
+$color-link--hover: #43abf0;
+$color-link--active: #2d86c2;
+
+$color-bg--light: $color--light;
+$color-bg--dark: $color--dark;
+$color-bg--input: rgba($color--light, 0.85);
+$color-bg--primary: $color--secondary;
+$color-bg--header: #10101d;
+$color-bg--footer: #3d4050;
+$color-bg--accent: $color--accent;
+
+$color-btn: $color--accent;
+$color-btn--light: $color--light;
+$color-btn--hover: #47a7e8;
+$color-btn--active: #3f8fc6;
+$color-btn--hover-light: #ece7e7;
+$color-btn--active-light: #dbd8d8;
+
+$color-range-track: rgba($color-bg--light, 0.7);
+$color-range-track--border: $color--light;
+$color-range-thumb: #42a9ed;
+$color-range-thumb--active: #286690;
+$color-range-thumb--border: #286690;
+
+$range-thumb-size: 27px;
+$range-track-height: 6px;
+
+:root {
+  --stepper__item--size: 100px;
+
+  @media (max-width: $desktop-width--min) {
+    --stepper__item--size: 70px;
+  }
+}
+
+@supports (font-size: clamp(1rem, 1vw, 1rem)) {
+  :root {
+    --font-size-base: clamp(0.688rem, 0.125vw + 0.662rem, 0.813rem); //11-13
+    --font-size-md: clamp(0.813rem, 0.125vw + 0.787rem, 0.938rem); //13-15
+    --font-size-lg: clamp(1rem, 0.125vw + 0.975rem, 1.125rem); //16-18
+    --font-size-xl: clamp(1.125rem, 0.125vw + 1.1rem, 1.25rem); //18-20
+    --font-size-h2: clamp(1.25rem, 1vw + 1.05rem, 2.25rem); //20-36
+    --font-size-h1: clamp(1.625rem, 1.375vw + 1.35rem, 3rem); //26-48
+    --font-size-stepper: clamp(0.875rem, 0.125vw + 0.85rem, 1rem); //14-16
+  }
+
+  @media (max-width: $desktop-width--min) {
+    :root {
+      --font-size-stepper: clamp(1.125rem, 0.938vw + 0.938rem, 1.5rem); //18-24
+    }
+  }
+}
+
+@supports not (font-size: clamp(1rem, 1vw, 1rem)) {
+  :root {
+    --font-size-base: 0.813rem;
+    --font-size-md: 0.938rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-h2: 2.25rem;
+    --font-size-h1: 3rem;
+    --font-size-stepper: 1rem;
+  }
+
+  @media (max-width: $desktop-width--min) {
+    :root {
+      --font-size-stepper: 1.5rem;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    :root {
+      --font-size-base: 0.688rem;
+      --font-size-md: 0.813rem;
+      --font-size-lg: 1rem;
+      --font-size-xl: 1.125rem;
+      --font-size-h1: 1.625rem;
+      --font-size-h2: 1.25rem;
+      --font-size-stepper: 1.125rem;
+    }
+  }
+}

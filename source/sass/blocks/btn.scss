@@ -1,0 +1,52 @@
+.btn {
+  @include reset;
+  @include focus;
+
+  display: inline-block;
+  padding: 0.875rem 0.625rem;
+
+  font-size: var(--font-size-base);
+  line-height: 1.2;
+  font-weight: 400;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color--light;
+
+  background-color: $color-btn;
+
+  border: 1px solid $color--light;
+  border-radius: 4px;
+
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    background-color: $color-btn--hover;
+  }
+
+  &:active {
+    background-color: $color-btn--active;
+  }
+
+  &--light {
+    color: $color--dark;
+
+    background-color: $color-btn--light;
+
+    border: 1px solid $color--dark;
+
+    &:hover {
+      background-color: $color-btn--hover-light;
+    }
+
+    &:active {
+      background-color: $color-btn--active-light;
+    }
+  }
+
+  &--submit {
+    font-size: var(--font-size-md);
+    font-weight: 600;
+  }
+}

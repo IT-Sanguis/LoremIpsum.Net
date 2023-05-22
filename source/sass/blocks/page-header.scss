@@ -1,0 +1,178 @@
+.page-header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+
+  display: flex;
+
+  flex-shrink: 0;
+
+  width: 100%;
+  min-height: $min-header-height;
+
+  background-color: rgba($color-bg--header, 0.9);
+
+  transition: min-height 0.5s;
+
+  &--scroll {
+    min-height: 4.688rem;
+  }
+}
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.938rem;
+
+  width: 90vw;
+  padding-top: 1.563rem;
+  padding-bottom: 1.563rem;
+}
+
+.page-header__logo {
+  display: flex;
+}
+
+.page-header__burger {
+  display: none;
+}
+
+@media (max-width: $desktop-width--min) {
+  .page-header__burger {
+    position: relative;
+
+    flex-shrink: 0;
+
+    display: block;
+    box-sizing: content-box;
+
+    width: 40px;
+    height: 2px;
+    padding: 20px;
+
+    background-color: $color-btn--light;
+    background-clip: content-box;
+
+    border: none;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent; /* stylelint-disable-line */
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 20px;
+
+      width: 40px;
+      height: 2px;
+
+      background-color: $color-btn--light;
+
+      transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+        transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    &::before {
+      top: 10px;
+    }
+
+    &::after {
+      top: 30px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $color-btn;
+
+      &::before,
+      &::after {
+        background-color: $color-btn;
+      }
+    }
+
+    &:active {
+      background-color: rgba($color-btn, 0.8);
+
+      &::before,
+      &::after {
+        background-color: rgba($color-btn, 0.8);
+      }
+    }
+
+    &--open {
+      background-color: transparent;
+
+      &::before,
+      &::after {
+        top: 50%;
+        left: 20px;
+
+        width: 40px;
+        height: 2px;
+
+        transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1),
+          transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+
+        background-color: $color--light;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+
+        &::before {
+          background-color: $color-btn;
+        }
+
+        &::after {
+          background-color: $color-btn;
+        }
+      }
+
+      &:active {
+        background-color: transparent;
+
+        &::before {
+          background-color: rgba($color-btn, 0.8);
+        }
+
+        &::after {
+          background-color: rgba($color-btn, 0.8);
+        }
+      }
+    }
+  }
+
+  .no-js {
+    .page-header {
+      position: fixed;
+      align-items: center;
+
+      min-height: $min-header-height--no-js;
+      padding: 0;
+    }
+
+    .page-header__wrapper {
+      display: flex;
+      flex-direction: column;
+
+      padding: 0;
+    }
+
+    .page-header__burger {
+      display: none;
+    }
+  }
+}

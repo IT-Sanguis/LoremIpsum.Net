@@ -1,0 +1,8 @@
+style.min.css
+*.tsx
+*.jsx
+*.ts
+*.js
+*.md
+*.svg
+/node_modules

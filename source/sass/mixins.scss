@@ -1,0 +1,49 @@
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-list {
+  @include reset;
+
+  list-style: none;
+}
+
+@mixin range-thumb {
+  box-sizing: border-box;
+  width: $range-thumb-size;
+  height: $range-thumb-size;
+
+  background-color: $color-range-thumb;
+
+  border: 3px solid $color-range-thumb--border;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+@mixin range-track {
+  box-sizing: border-box;
+  width: 100%;
+  height: $range-track-height;
+
+  background-color: $color-range-track;
+
+  // border: none;
+  border: 1px solid $color-range-track--border;
+  border-radius: 3px;
+}
+
+@mixin focus {
+  &:focus-visible {
+    outline: 5px solid $color--accent;
+    outline-offset: 3px;
+  }
+}
+
+@mixin focus-within {
+  &:focus-within {
+    outline: 5px solid $color--accent;
+    outline-offset: 3px;
+  }
+}

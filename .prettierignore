@@ -1,0 +1,9 @@
+build/
+node_modules/
+/.vscode
+.vscode
+**/.git
+**/.svn
+**/.hg
+**/node_modules
+*.html

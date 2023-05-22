@@ -1,0 +1,120 @@
+.stepper {
+  @include reset-list;
+
+  display: flex;
+  justify-content: center;
+  column-gap: 1.875rem;
+  flex-wrap: wrap;
+
+  overflow-x: hidden;
+}
+
+.stepper__item {
+  position: relative;
+
+  flex: 1 1 8.438rem;
+
+  max-width: 13.25rem;
+  min-height: 11.25rem;
+  margin-bottom: 0.938rem;
+  padding-top: calc(var(--stepper__item--size) + 1.25rem);
+
+  font-size: var(--font-size-stepper);
+  font-weight: 400;
+  line-height: 1.2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: var(--stepper__item--size);
+    height: var(--stepper__item--size);
+
+    background-color: $color-bg--accent;
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    border: 0.313rem solid #286690;
+    border-radius: 50%;
+  }
+
+  &--magnifier::before {
+    background-image: url("../img/icon-magnifier.svg");
+  }
+
+  &--percent::before {
+    background-image: url("../img/icon-percent.svg");
+  }
+
+  &--doc::before {
+    background-image: url("../img/icon-doc.svg");
+  }
+
+  &--mail::before {
+    background-image: url("../img/icon-mail.svg");
+  }
+
+  &--cash::before {
+    background-image: url("../img/icon-cash.svg");
+  }
+
+  &:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--stepper__item--size) / 2);
+    left: calc(50% + 0.75rem);
+
+    transform: translateX(50%);
+
+    width: 6.875rem;
+    height: 0.375rem;
+
+    background-image: url("../img/icon-circles.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: $desktop-width--min) {
+  .stepper {
+    flex-direction: column;
+    row-gap: 1.563rem;
+
+    max-width: 31.25rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .stepper__item {
+    display: flex;
+    align-items: center;
+
+    flex: 0 1 auto;
+
+    max-width: none;
+    min-height: calc(var(--stepper__item--size));
+    margin-bottom: 0.938rem;
+    padding-top: 0;
+    padding-left: calc(var(--stepper__item--size) + 1.25rem);
+
+    text-align: left;
+    font-size: var(--font-size-stepper);
+
+    &::before {
+      top: 0;
+      left: 0;
+
+      transform: translateX(0);
+
+      background-size: 40%;
+    }
+
+    &:not(:last-child)::after {
+      content: none;
+    }
+  }
+}

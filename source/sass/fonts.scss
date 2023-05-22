@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  // src: url("../fonts/Lato-Regular.woff2") format("woff2"),
+  //      url("../fonts/Lato-Regular.woff") format("woff");
+  src: url("../fonts/Lato-Regular-subset.woff2") format("woff2"),
+    url("../fonts/Lato-Regular-subset.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  // src: url("../fonts/Lato-Semibold.woff2") format("woff2"),
+  //      url("../fonts/Lato-Semibold.woff") format("woff");
+  src: url("../fonts/Lato-Semibold-subset.woff2") format("woff2"),
+    url("../fonts/Lato-Semibold-subset.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  // src: url("../fonts/Lato-Bold.woff2") format("woff2"),
+  //      url("../fonts/Lato-Bold.woff") format("woff");
+  src: url("../fonts/Lato-Bold-subset.woff2") format("woff2"),
+    url("../fonts/Lato-Bold-subset.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  // src: url("../fonts/Lato-Black.woff2") format("woff2"),
+  //      url("../fonts/Lato-Black.woff") format("woff");
+  src: url("../fonts/Lato-Black-subset.woff2") format("woff2"),
+    url("../fonts/Lato-Black-subset.woff") format("woff");
+}

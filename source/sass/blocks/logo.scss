@@ -1,0 +1,15 @@
+.logo {
+  @include focus;
+
+  color: $color--light;
+
+  &:hover {
+    color: $color-range-thumb;
+  }
+}
+
+.logo__img {
+  width: 12.9vw;
+  min-width: 185px;
+  height: auto;
+}

@@ -1,0 +1,205 @@
+.intro {
+  min-height: 53.125rem;
+  // Паддинг пересчитывается динамически через JS, но ниже фоллбек на случай no-js
+  padding-top: $min-header-height;
+
+  color: $color--dark;
+
+  background-color: #b7b4bb;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 100%;
+}
+
+.no-js .intro,
+.no-webp .intro {
+  background-image: url("../img/bg-intro-desktop-max@1x.jpg");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-intro-desktop-max@2x.jpg");
+  }
+}
+
+.webp .intro {
+  background-image: url("../img/bg-intro-desktop-max@1x.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-intro-desktop-max@2x.webp");
+  }
+}
+
+.intro__wrapper {
+  width: 85vw;
+  margin-top: 6.5rem;
+  margin-bottom: 3.75rem;
+}
+
+.intro__content {
+  max-width: 48.75rem;
+}
+
+.intro__title {
+  @include reset;
+
+  min-height: 7.813rem;
+  margin-bottom: 5rem;
+
+  font-size: var(--font-size-h1);
+  line-height: 1.2;
+  font-weight: 700;
+  overflow-wrap: break-word;
+  text-transform: uppercase;
+}
+
+.intro__descr {
+  margin-bottom: 5rem;
+}
+
+.intro__subtitle {
+  @include reset;
+
+  margin-bottom: 0.625rem;
+
+  font-size: var(--font-size-xl);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.intro__list {
+  @include reset-list;
+
+  margin-bottom: 1.875rem;
+  padding-left: 1.563rem;
+}
+
+.intro__item {
+  position: relative;
+
+  font-size: var(--font-size-xl);
+  line-height: 1.2;
+  font-weight: 400;
+
+  &:not(:last-child) {
+    margin-bottom: 0.313rem;
+  }
+
+  &::before {
+    content: "-";
+    position: absolute;
+    left: -1rem;
+  }
+}
+
+.intro__buttons {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1.875rem;
+}
+
+.intro__btn {
+  flex: 0 1 11.438rem;
+}
+
+@media (max-width: $desktop-width) {
+  .no-js .intro,
+  .no-webp .intro {
+    background-image: url("../img/bg-intro-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-intro-desktop@2x.jpg");
+    }
+  }
+
+  .webp .intro {
+    background-image: url("../img/bg-intro-desktop@1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-intro-desktop@2x.webp");
+    }
+  }
+
+  .intro__content {
+    max-width: 35.75rem;
+  }
+}
+
+@media (max-width: $desktop-width--min) {
+  .intro__title {
+    margin-bottom: 3rem;
+  }
+
+  .intro__descr {
+    margin-bottom: 3rem;
+  }
+
+  .no-js .intro {
+    //Учитываем навигацию
+    padding-top: $min-header-height--no-js + $min-nav-height--desktop--min;
+  }
+}
+
+@media (max-width: $tablet-width--max) {
+  .intro__wrapper {
+    text-align: center;
+  }
+
+  .intro__content {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .intro__descr {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 33.75rem;
+
+    text-align: left;
+  }
+
+  .intro__buttons {
+    justify-content: center;
+  }
+
+  .no-js .intro {
+     //Учитываем навигацию
+    padding-top: $min-header-height--no-js + $min-nav-height--tablet;
+  }
+
+  .no-js .intro,
+  .no-webp .intro {
+    background-image: url("../img/bg-intro-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-intro-tablet@2x.jpg");
+    }
+  }
+
+  .webp .intro {
+    background-image: url("../img/bg-intro-tablet@1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-intro-tablet@2x.webp");
+    }
+  }
+}
+
+@media (max-width: $mobile-width--max) {
+  .no-js .intro,
+  .no-webp .intro {
+    background-image: url("../img/bg-intro-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-intro-mobile@2x.jpg");
+    }
+  }
+
+  .webp .intro {
+    background-image: url("../img/bg-intro-mobile@1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-intro-mobile@2x.webp");
+    }
+  }
+}

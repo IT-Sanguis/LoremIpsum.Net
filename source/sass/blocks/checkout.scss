@@ -1,0 +1,126 @@
+.checkout {
+  min-height: 57.5rem;
+
+  text-align: center;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.no-js .checkout,
+.no-webp .checkout {
+  background-image: url("../img/bg-checkout-desktop-max@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-checkout-desktop-max@2x.png");
+  }
+}
+
+.webp .checkout {
+  background-image: url("../img/bg-checkout-desktop-max@1x.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-checkout-desktop-max@2x.webp");
+  }
+}
+
+.checkout__wrapper {
+  width: 85vw;
+  margin-top: 7.4rem;
+  margin-bottom: 3.75rem;
+}
+
+.checkout__heading {
+  margin-bottom: 5rem;
+}
+
+.checkout__title {
+  @include reset;
+
+  margin-bottom: 1.875rem;
+
+  font-size: var(--font-size-h2);
+  line-height: 1.2;
+  font-weight: 900;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
+
+.checkout__notice {
+  @include reset;
+
+  margin-bottom: 1.25rem;
+
+  font-size: var(--font-size-lg);
+  line-height: 1.2;
+  font-weight: 400;
+  color: #bbbbbb;
+}
+
+.checkout__stepper {
+  margin-bottom: 3.125rem;
+}
+
+@media (max-width: $desktop-width) {
+  .no-js .checkout,
+  .no-webp .checkout {
+    background-image: url("../img/bg-checkout-desktop@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-checkout-desktop@2x.png");
+    }
+  }
+
+  .webp .checkout {
+    background-image: url("../img/bg-checkout-desktop@1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-checkout-desktop@2x.webp");
+    }
+  }
+}
+
+@media (max-width: $desktop-width--min) {
+  .checkout__heading {
+    margin-bottom: 3.75rem;
+  }
+}
+
+@media (max-width: $tablet-width--max) {
+  .no-js .checkout,
+  .no-webp .checkout {
+    background-image: url("../img/bg-checkout-tablet@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-checkout-tablet@2x.png");
+    }
+  }
+
+  .webp .checkout {
+    background-image: url("../img/bg-checkout-tablet@1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-checkout-tablet@2x.webp");
+    }
+  }
+}
+
+@media (max-width: $mobile-width--max) {
+  .no-js .checkout,
+  .no-webp .checkout {
+    background-image: url("../img/bg-checkout-mobile@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-checkout-mobile@2x.png");
+    }
+  }
+
+  .webp .checkout {
+    background-image: url("../img/bg-checkout-mobile@1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-checkout-mobile@2x.webp");
+    }
+  }
+}
